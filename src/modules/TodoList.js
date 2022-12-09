@@ -19,6 +19,17 @@ export default class TodoList {
     localStorage.setItem('todoList', JSON.stringify(this.todoList));
   }
 
+  async removeTodoItem(index) {
+    this.todoList = await this.todoList.filter((item) => item.index != index);
+    this.todoList = this.todoList.map((item) => {
+      if (item.index > index) {
+        item.index -= 1;
+      }
+      return item;
+    });
+    localStorage.setItem('todoList', JSON.stringify(this.todoList));
+  }
+
   editToDoItem(index, changeData) {
     Object.entries(changeData).forEach(([key, value]) => {
       this.todoList[index - 1][key] = value;
