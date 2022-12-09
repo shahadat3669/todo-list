@@ -73,8 +73,8 @@ const generateListHTML = (taskList) => {
               <input name= "description" class="list-item-description" type="text" value="${item.description}" readonly/>
             </div>
             <div class="list-item-action">
-            <div class="trash "> 
-              <i class="fa-solid fa-trash icon btn"></i></div>
+            <div class="trash hidden"> 
+              <i class="fa-solid fa-trash icon  btn"></i></div>
             <div class="ellipsis"> 
               <i class="fa-solid fa-ellipsis-vertical icon btn"></i></div>
             </div>`;
