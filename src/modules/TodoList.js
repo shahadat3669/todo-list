@@ -7,6 +7,10 @@ export default class TodoList {
       : [];
   }
 
+  getTodoList() {
+    return this.todoList;
+  }
+
   addTodoItem(todoItem) {
     todoItem.index = this.todoList.length + 1;
     todoItem.completed = false;
