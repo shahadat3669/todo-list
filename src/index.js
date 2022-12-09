@@ -30,3 +30,29 @@ const taskList = [
   { index: 5, description: 'Fist task', completed: false },
   { index: 5, description: 'Fist task', completed: false },
 ];
+
+const sortItems = (items) => {
+  const sortedItems = items.sort((a, b) => a.index - b.index);
+  return sortedItems;
+};
+
+const generateTaskListHTML = () => {
+  const sortedList = sortItems(taskList);
+  sortedList.forEach((item) => {
+    const todoItem = document.createElement('li');
+    todoItem.classList.add('list-item', 'list-style');
+    todoItem.innerHTML = `
+            <div class="list-item-content">
+              <input  type="checkbox" />
+              <label>${item.description}</label>
+            </div>
+            <div class="list-item-action">
+              <i class="fa-solid fa-trash icon hidden"></i>
+              <i class="fa-solid fa-ellipsis-vertical icon"></i>
+            </div>`;
+    list.appendChild(todoItem);
+  });
+};
+
+// Append heading node to the DOM
+document.addEventListener('DOMContentLoaded', generateTaskListHTML);
