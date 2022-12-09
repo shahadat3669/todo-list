@@ -14,21 +14,6 @@ const taskList = [
   { index: 3, description: 'Fist task', completed: false },
   { index: 4, description: 'Fist task', completed: false },
   { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
-  { index: 5, description: 'Fist task', completed: false },
 ];
 
 const sortItems = (items) => {
