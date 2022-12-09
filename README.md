@@ -75,7 +75,7 @@
 
 ## 👁 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://shahadat3669.github.io/todo-list)
+- [Live Demo Link](https://microverse-todo.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
