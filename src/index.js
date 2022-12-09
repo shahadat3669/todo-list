@@ -6,12 +6,27 @@ import '@fortawesome/fontawesome-free/js/brands';
 
 require('./assets/logo.png');
 // Create heading node
-const heading = document.createElement('h1');
-const icon = document.createElement('i');
-icon.classList.add('fa-solid', 'fa-house');
-heading.textContent = 'Hi there ';
-
-// Append heading node to the DOM
-const app = document.querySelector('#root');
-app.append(heading);
-app.append(icon);
+const list = document.querySelector('.list-ul');
+const taskList = [
+  { index: 0, description: 'Fist task', completed: false },
+  { index: 1, description: 'Fist task', completed: false },
+  { index: 2, description: 'Fist task', completed: false },
+  { index: 3, description: 'Fist task', completed: false },
+  { index: 4, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+  { index: 5, description: 'Fist task', completed: false },
+];
