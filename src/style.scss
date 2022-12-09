@@ -12,14 +12,14 @@ $primary_2: #b2728c;
 $primary_3: #d7a5bd;
 
 // box shadow
-$shadowSmall: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-$shadowMedium: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-$shadowBig: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+$shadowSmall: rgba(0, 0, 0, 0.24) 0 3px 8px;
+$shadowMedium: rgba(0, 0, 0, 0.35) 0 5px 15px;
+$shadowBig: rgba(0, 0, 0, 0.3) 0 19px 38px, rgba(0, 0, 0, 0.22) 0 15px 12px;
 
 // reset css
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -78,7 +78,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -93,15 +92,17 @@ main {
   display: block;
 }
 
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
 body {
-  line-height: 1;
   position: relative;
-  width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  background-color: $white;
+  color: $gray_7;
+  display: grid;
+  place-items: center;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 ol,
@@ -109,8 +110,8 @@ ul {
   list-style: none;
 }
 
-input:required,
-input {
+input,
+input:required {
   border-radius: 0;
   box-shadow: none;
 }
@@ -138,19 +139,10 @@ input[type='radio'] {
 // base style
 html {
   font-size: 16px;
-} /*16px*/
+}
 
-body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  line-height: 1.75;
-  background-color: $white;
-  color: $gray_7;
-  display: grid;
-  place-items: center;
-  background-color: #d3d3d3;
-  min-height: 100vh;
-  min-width: 100vw;
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 p {
@@ -181,6 +173,7 @@ h2 {
   font-size: 3.157rem;
   word-break: break-word;
 }
+
 .subheading,
 h3 {
   font-size: 2.369rem;
@@ -195,15 +188,16 @@ small,
   border: none;
   padding: 8px;
   cursor: pointer;
-  border: none;
 
   &-add {
     color: $primary_2;
     background-color: $gray_1;
+
     &:hover {
       color: $primary_1;
     }
   }
+
   &-clear {
     width: 100%;
     padding: 8px 16px;
@@ -256,6 +250,7 @@ main {
 .form-add-item {
   display: flex;
   justify-content: space-between;
+
   & .add-item {
     font-size: 1rem;
     border: none;
@@ -283,9 +278,11 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
+
     & .icon {
       font-size: 20px;
       cursor: pointer;
+
       &.hidden {
         display: none;
       }
