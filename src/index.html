@@ -8,6 +8,33 @@
     <link rel="icon" href="./assets/logo.png" type="image/png" />
   </head>
   <body>
-    <div id="root"></div>
+    <main>
+      <div class="header list-style">
+        <h2 class="title header-title">
+          Today's To Do<i
+            class="fa-solid fa-arrows-rotate header-title-icon"
+          ></i>
+        </h2>
+        <!-- <div id="root"></div> -->
+      </div>
+      <div class="todo-list">
+        <form method="post" class="form-add-item list-style">
+          <input
+            id="addItem"
+            class="add-item"
+            type="text"
+            placeholder="Add to your list"
+            required
+          />
+          <button type="submit" id="addBtn" class="btn btn-add">
+            <i class="fa-solid fa-arrow-turn-down rotate-90"></i>
+          </button>
+        </form>
+        <ul class="list-ul"></ul>
+        <button class="text-center btn btn-clear list-style">
+          clear all completed
+        </button>
+      </div>
+    </main>
   </body>
 </html>
