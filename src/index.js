@@ -30,7 +30,7 @@ const bindTaskEvents = async (taskListItem) => {
     icon2.classList.add('hidden');
   });
   icon1.addEventListener('click', async () => {
-    await newTodoList.removeTodoItem(todoItemId);
+    await newTodoList.removeTodoItem(parseInt(todoItemId, 10));
     // eslint-disable-next-line no-use-before-define
     generateListHTML(newTodoList.getTodoList());
   });

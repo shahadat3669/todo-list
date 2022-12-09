@@ -20,7 +20,7 @@ export default class TodoList {
   }
 
   async removeTodoItem(index) {
-    this.todoList = await this.todoList.filter((item) => item.index != index);
+    this.todoList = await this.todoList.filter((item) => item.index !== index);
     this.todoList = this.todoList.map((item) => {
       if (item.index > index) {
         item.index -= 1;
