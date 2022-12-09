@@ -18,4 +18,11 @@ export default class TodoList {
     this.todoList.push(newTodoItem);
     localStorage.setItem('todoList', JSON.stringify(this.todoList));
   }
+
+  editToDoItem(index, changeData) {
+    Object.entries(changeData).forEach(([key, value]) => {
+      this.todoList[index - 1][key] = value;
+    });
+    localStorage.setItem('todoList', JSON.stringify(this.todoList));
+  }
 }
