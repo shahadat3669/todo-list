@@ -23,16 +23,16 @@ const bindTaskEvents = async (taskListItem) => {
   const icon2 = taskListItem.querySelector('.ellipsis');
   const description = taskListItem.querySelector('input[name="description"]');
 
-  description.addEventListener('click', (event) => {
-    event.target.removeAttribute('readOnly');
-    event.target.classList.add('active-item');
-    icon1.classList.remove('hidden');
-    icon2.classList.add('hidden');
-  });
   icon1.addEventListener('click', async () => {
     await newTodoList.removeTodoItem(parseInt(todoItemId, 10));
     // eslint-disable-next-line no-use-before-define
     generateListHTML(newTodoList.getTodoList());
+  });
+  icon2.addEventListener('click', () => {
+    description.removeAttribute('readOnly');
+    description.classList.add('active-item');
+    icon1.classList.remove('hidden');
+    icon2.classList.add('hidden');
   });
 
   description.addEventListener('focusout', (event) => {
