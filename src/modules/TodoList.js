@@ -19,13 +19,23 @@ export default class TodoList {
     localStorage.setItem('todoList', JSON.stringify(this.todoList));
   }
 
-  async removeTodoItem(index) {
-    this.todoList = await this.todoList.filter((item) => item.index !== index);
+  removeTodoItem(index) {
+    this.todoList = this.todoList.filter((item) => item.index !== index);
     this.todoList = this.todoList.map((item) => {
       if (item.index > index) {
         item.index -= 1;
       }
       return item;
+    });
+    localStorage.setItem('todoList', JSON.stringify(this.todoList));
+  }
+
+  removeTodoItemByCompleted() {
+    this.todoList = this.todoList.sort((a, b) => a.index - b.index);
+    this.todoList = this.todoList.filter((t) => !t.completed);
+    this.todoList = this.todoList.map((t, i) => {
+      t.index = i + 1;
+      return t;
     });
     localStorage.setItem('todoList', JSON.stringify(this.todoList));
   }
